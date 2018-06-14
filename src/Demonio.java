@@ -29,7 +29,7 @@ public abstract class Demonio implements Visitable {
     }
 
     public boolean puedeCazar(Almas alma) {
-        boolean condicion1 = nivelMaldad> alma.getBondad();
+        boolean condicion1 = nivelMaldad > alma.getBondad();
         boolean condicion2 = this.condicionParticular(alma);
         return condicion1 && condicion2;
     }
@@ -40,10 +40,24 @@ public abstract class Demonio implements Visitable {
 
     public void atormentarA(Almas alma){
         alma.atormentar();
+        this.nivelMaldad++;
     }
+
     public void almasPuedeCazar(){
 
+    }
 
+    public void salirDeCaza(Lugar lugar){
+        List<Almas> almasCazables = lugar.almasCazables(this);
+        for (Almas alma : almasCazables) {
+            lugar.removerAlma(alma);
+            this.setNivelMaldad(this.nivelMaldad += 2);
+            this.almasCazadas.add(alma);
+        }
+        List<Almas> almasParaAtormentar = lugar.getLasAlmas;
+        for (Almas alma : almasCazables) {
+            this.atormentarA(alma);
+        }
     }
 
 }

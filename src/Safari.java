@@ -2,6 +2,7 @@ public class Safari extends Mision implements Visitor {
 
 
     public int minimo;
+    public String lugar;
 
 
 

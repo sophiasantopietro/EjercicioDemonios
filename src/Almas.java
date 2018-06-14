@@ -44,7 +44,7 @@ public class Almas {
 
     public void mitadValor(){
 
-        this.setValor( this.valor / 2);
+        this.setValor( this.getValor / 2);
 
     }
 }

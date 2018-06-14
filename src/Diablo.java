@@ -12,6 +12,6 @@ public class Diablo {
                 List<Almas> almas = new ArrayList<>();
                 almas.add(alma);
                 lugar.setAlmas(almas);
-                lugar.setLugar("Asgard");
+                lugar.setNombre("Asgard");
         }
 }

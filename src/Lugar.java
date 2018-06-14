@@ -3,7 +3,6 @@ import java.util.List;
 
 public class Lugar  {
     private String nombre;
-    private String lugar;
     public List<Almas> lasAlmas = new ArrayList<Almas>();
 
     public String getNombre() {
@@ -22,15 +21,8 @@ public class Lugar  {
         this.lasAlmas = lasAlmas;
     }
 
-    public String getLugar() {
-        return lugar;
-    }
 
-    public void setLugar(String lugar) {
-        this.lugar = lugar;
-    }
-
-    public List<Almas> almasCazables (Demonio demonio) {
+    public List<Almas> almasCazables(Demonio demonio) {
         List<Almas> cazables = new ArrayList<Almas>();
         for (Almas alma : this.getLasAlmas()) {
             if (demonio.puedeCazar(alma)) {
@@ -38,12 +30,11 @@ public class Lugar  {
             }
         }
         return cazables;
-
-
     }
 
-    public
-
+    public void removerAlma(Almas alma){
+        lasAlmas.remove(alma);
+    }
 
 
     }

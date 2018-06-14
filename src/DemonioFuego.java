@@ -10,6 +10,5 @@ public class DemonioFuego extends Demonio {
     public void atormentarA(Almas alma) {
         super.atormentarA(alma);
         alma.setFriolenta(false);
-        this.nivelMaldad++;
     }
 }

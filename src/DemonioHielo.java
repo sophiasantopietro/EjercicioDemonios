@@ -10,7 +10,5 @@ public class DemonioHielo extends Demonio {
     public void atormentarA(Almas alma) {
         super.atormentarA(alma);
         alma.setFriolenta(true);
-        this.nivelMaldad++;
-
     }
 }
